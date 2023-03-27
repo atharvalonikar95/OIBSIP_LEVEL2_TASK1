@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url(img/calciback.png);
+            background-size: 50%;
+        }
+        h1{
+            color: crimson;
+            text-shadow:rgb(49, 49, 181) 4px 2px 4px;
+            font: italic;
+            text-align: center;
+            text-size-adjust:20px ;
+            font-size: 3rem;
+
+        }
+        #text{
+            width: 30%;
+
+        }
+
+        input{
+            width:10% ;
+            height:10% ;
+            color: red;
+            margin: 5px;
+            padding: 15px;
+            font-size: 30px;
+            opacity: 85%;
+            border: 0.5rem solid black;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h1><i>Calculator</i><h1>
+    <div id="forms">
+        <form  name="abc">
+            <input  type="text" id="text" name="answer"><br>
+            <!-- <input type=" text " onclick ="abc.answer.value+= abc.answer.value"><br> -->
+            <input type="button" value="9"onclick=" abc.answer.value += '9'">
+            <input type="button" value="8" onclick=" abc.answer.value +='8'">
+            <input type="button" value="7" onclick=" abc.answer.value += '7'">
+            <input type="button" value="+" onclick=" abc.answer.value += '+'"><br>
+            <input type="button" value="6" onclick=" abc.answer.value += '6'">
+            <input type="button" value="5" onclick=" abc.answer.value += '5'">
+            <input type="button" value="4" onclick=" abc.answer.value += '4'">
+            <input type="button" value="-" onclick=" abc.answer.value += '-'"><br>
+            <input type="button" value="3" onclick=" abc.answer.value += '3'">
+            <input type="button" value="2" onclick=" abc.answer.value += '2'">
+            <input type="button" value="1" onclick=" abc.answer.value += '1'">
+            <input type="button" value="*" onclick=" abc.answer.value += '*'"><br>
+            <input type="button" value="0" onclick=" abc.answer.value += '0'">
+            <input type="button" value="00" onclick=" abc.answer.value += '00'">
+            <input type="button"  id ="dot" value="." onclick=" abc.answer.value += '.'">
+            <input type="button" value="/" onclick=" abc.answer.value += '/'"><br>
+
+            <input type="button"  value="=" onclick="abc.answer.value = eval(abc.answer.value)">
+            <input type="button" value="C" id="clr" onclick="abc.answer.value = ''">
+            <!-- <input type="button" value="del" id="erase" onclick="abc.answer.value = ''"> -->
+            <input type="button" value="%" id="percentage" onclick="abc.answer.value = (abc.answer.value)/100">
+        </form>
+    </div>
+    
+</body>
+</html>
